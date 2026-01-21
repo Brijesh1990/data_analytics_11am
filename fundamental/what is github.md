@@ -36,18 +36,22 @@ Git works locally on your computer and stores the complete history of your proje
 3. **Collaboration**: Others can pull your changes or submit pull requests to contribute
 
 
-github commands ...  
+## github commands ...  
 
-step 1: create account on github 
-step 2: login with github 
-step 3: create respository 
-step 4: download gitbash or git 
-step 5: create a repository 
-step 6: github commands 
+1. **create account** : create account on github 
+2. **login in github** : login with github 
+3. **create respository** : create your github repository 
+4. **download gitbash or git**: download from [text](https://git-scm.com/install/windows) 
+5. **create a repository** 
+6. **github commands** : all commands here
 
-         a) git init 
-         b) git add .
-         c) git commit -m '21-01-2026 all data uploaded'
-         d) git remote add origin github repository url
-         e) git push -u origin master  
-         
+1. **git init** 
+2. **git add**
+3. **git commit -m '21-01-2026 all data uploaded'**
+4. **git remote add origin github repository url**
+5. **git push -u origin master**  
+
+
+## How to download backup : 
+
+  1.  **Git clone** : git clone paste github url  
