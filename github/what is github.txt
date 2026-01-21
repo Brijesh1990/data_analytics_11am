@@ -1,0 +1,14 @@
+
+
+1)  github is an repository systems for shared data
+2)  create account on github 
+3)  login with your account 
+4)  create a repository 
+5)  github commands for upload local data on repository 
+
+    
+    a) git init
+    b) git add .
+    c) git commit -m "first commit"
+    d) git remote add origin https://github.com/Brijesh1990/data_analytics_11am.git
+    e) git push -u origin main
