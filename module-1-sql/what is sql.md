@@ -2,7 +2,7 @@
  1. sql stands for structured query language 
  2. sql is case-insenstive language 
     examples :
-    ``     
+    ```    
      insert or INSERT  or Insert
  
     ``` 
