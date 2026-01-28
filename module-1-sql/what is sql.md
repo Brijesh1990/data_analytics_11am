@@ -177,3 +177,112 @@ RENAME TABLE old_table_name TO new_table_name;
 RENAME TABLE employee TO tbl_employee;
 RENAME TABLE users TO tbl_users;
 ```
+
+
+## 6) TRUNCATE - Removing Table Data or clear all data from tables
+
+Used to remove or empty all data from tables.
+
+### Syntax
+```sql
+TRUNCATE TABLE tbl_country;
+```
+**Note:** After truncate, data cannot be rolled back.
+
+## 7) DROP - Delete Database and Tables structure after drop can not be rollback
+
+Used to delete database and table structures.
+
+### Syntax
+
+**a) Drop a database:**
+```sql
+DROP DATABASE flipkart_db;
+```
+
+**b) Drop a table:**
+```sql
+DROP TABLE tbl_country;
+``` 
+
+## DML (data manipulation language)
+   
+   DML is used to manipulate data meanse insert | delete | update data in a table   
+
+   examples : insert | delete | update
+
+  1. insert a data  in tables 
+
+     ## single data insert 
+      ``` 
+      insert into tablename (columnname) values('value')
+      ```
+      **query**
+      ```
+      insert into tbl_feedback(name,email,subject,phone,comment) values('paree','paree@gmail.com','24x7 customer care support',9121212158,'help me to return products')
+
+      ```
+
+    ## multiple data insert 
+      ``` 
+      insert into tablename (columnname) values('value1'),('value2'),('value3')
+      ```
+      **query**
+      ```
+      insert into tbl_feedback(name,email,subject,phone,comment) values('punit','punit@gmail.com','24x7 customer care support',983845654,'help me to return products'),('brijesh','brijesh@gmail.com','24x7 customer care support',989845654,'help me to return products'),('kumar','kumar@gmail.com','24x7 customer care support',983845659,'help me to return products')
+
+      ```
+ 2. delete a data  in tables
+    
+    delete is used to delete a data from tables 
+    
+    **delete all data**
+    ```
+    delete from tablename
+    ```
+    examples:
+    ```
+    delete from tbl_feedback
+    ```
+    **delete particular data**
+    ```
+    delete from tbl_feedback where id=3;
+    ```
+    **delete between data**
+    ```
+     delete from tbl_feedback where id between 3 and 20;
+     ```
+    **delete alternate data**
+    ```
+     delete from tbl_feedback where id in(3,5,7,9);
+    ```
+3. update data : update is used to update any data from tables
+   **update data**
+   ```
+   update tbl_feedback set name='mukesh',email='mukesh@gmail.com',subject='hi customers',comment='hi i am mukesh' where id=4;
+   ```    
+
+## 3. DQL (data query  language)
+   
+    DQL stands for data query language it is used to fetch data or select data from tables.
+
+**select**
+
+**select all data**
+```
+select * from tbl_feedback
+
+```
+**select particular with column name**
+```
+select id,name,email from tbl_feedback
+
+```
+**select particular with id**
+```
+select  * from tbl_feedback where id=1;
+```
+**select particular between data**
+```
+select  * from tbl_feedback where between 1 and 100;
+```
