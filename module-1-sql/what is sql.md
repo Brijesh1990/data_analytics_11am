@@ -286,3 +286,110 @@ select  * from tbl_feedback where id=1;
 ```
 select  * from tbl_feedback where between 1 and 100;
 ```
+
+**select particular in operator data**
+```
+select * from tbl_feedback where id in(1,2);
+```
+
+**select particular data using limit**
+```
+select * from tbl_feedback where id limit 0,2;
+
+```
+
+**select particular data using order by(filter data) in ASC or DESC order**
+```
+select * from tbl_feedback order by name ASC;
+or
+select * from tbl_feedback order by name DESC;
+or
+select * from tbl_feedback order by name;
+
+```
+
+
+**searching data using like operator**
+
+```
+searching data start name of 'a' character
+
+1. select * from tbl_feedback where name like 'a%';
+or
+2. select * from tbl_feedback where name like 'p%';
+
+searching data end name of 'e' character
+
+3. select * from tbl_feedback where name like '%e';
+
+searching data start or end anywhere name of 'a' character
+
+4. select * from tbl_feedback where name like '%a%';
+
+```
+
+
+**sql function**
+sql function are two types 
+
+1. aggrigate function 
+   
+   **query**
+   **examples**
+   1. count
+   2. sum
+   3. max
+   4. min 
+   5. avg
+
+2. scalar function 
+   **query**
+   **examples**
+   1. first (first is not supported in mysql it support in oracle)
+   2. last  (last is not supported in mysql it support in oracle)
+   3. lcase
+   4. ucase
+   
+
+ **all query of function**
+
+ ```
+  1. select max(salary) as highest_salary from tbl_employee;
+  
+  2. select min(salary) as minimum_salary from tbl_employee;
+  
+  3. select count(employee_id) as total_number_employee from tbl_employee;
+
+  4. select sum(salary) as total_sum_salary from tbl_employee;
+ 
+  5. select avg(salary) as total_average_salary from tbl_employee;
+
+  6. select first(empname)  from tbl_employee;
+
+  7. select last(empname)  from tbl_employee;
+
+  8. select ucase(empname)  from tbl_employee;
+
+  9. select lcase(empname)  from tbl_employee;
+
+ ```   
+
+**subquery in sql**
+
+subquery meanse query within another query 
+
+**examples of subquery**
+
+```
+ select max(salary) as second_highest_salary from tbl_employee where salary < (select max(salary) from tbl_employee);
+
+```
+
+
+
+
+
+
+
+
+
