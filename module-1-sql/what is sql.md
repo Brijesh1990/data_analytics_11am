@@ -432,7 +432,9 @@ subquery meanse query within another query
 5. 5-NF (Normalized form)  
 
 
-1. create a 1-NF (basic information about table with primary key)
+**1-NF**
+
+create a 1-NF (basic information about table with primary key)
 
    **users**
 
@@ -441,5 +443,117 @@ subquery meanse query within another query
 |1            |b@gmail.com| 34  | Rs.89500|IT        |   
 
 
+**2-NF**
+
+create a 2-NF (its start to seperate tables with provides relationship b/w one tables to another table using foreign key)
+
+   **tbl_city**
+
+| city_id(pk) | cityname     |
+|-------------|----------    |    
+|1            |Rajkot        |
+|2            |Ahemdabad     |
+|3            |Badodra       |    
+
+
+
+   **tbl_customers**
+
+| customer_id(pk) | email | age     | address | city_id(fk)|
+|-------------|-------|----|-----|-------------------------|    
+|1            |b@gmail.com| 34  | 150 feet rajkot|1        |
+|2            |p@gmail.com| 18  | 150 feet ahemdabd|2      |
+
+
+**how to create foreign key**
+
+```
+create table tbl_customers
+(
+
+    customer_id int primary key AUTO_INCREMENT,
+    name varchar(2555),
+    email varchar(2555),
+    phone bigInt,
+    address text,
+    city_id int REFERENCES tbl_city(city_id)
+
+)
+```
+
+
+**3-NF**
+
+create a 3-NF (its start to seperate tables with provides relationship b/w one tables to another or more than one tables   using foreign key)
+
+
+   **tbl_country**
+
+|country_id(pk)|countryname  |
+|-------------|----------    |    
+|1            |India         |
+|2            |usa           |
+|3            |australia     |   
+
+
+
+   **tbl_state**
+
+|state_id(pk)|statename  |
+|-------------|----------|    
+|1            |gujrat    |
+|2            |mahrastra |
+|3            |rajasthan |   
+
+
+   **tbl_city**
+
+| city_id(pk) | cityname     |
+|-------------|----------    |    
+|1            |Rajkot        |
+|2            |Ahemdabad     |
+|3            |Badodra       |    
+
+
+
+   **tbl_customers**
+
+| customer_id(pk) | email | age     | address | country_id(fk)|state_id(fk)| city_id(fk) |
+|-------------|-------|----|-----|-------------------------|---------------|-------------|    
+|1            |b@gmail.com| 34  | 150 feet rajkot |1        | 1             | 1
+|2            |p@gmail.com| 18  | 150 feet ahemdabd |1      | 1             | 2          |
+
+
+**how to create foreign key**
+
+```
+create table tbl_customers
+(
+
+    customer_id int primary key AUTO_INCREMENT,
+    name varchar(2555),
+    email varchar(2555),
+    phone bigInt,
+    address text,
+    country_id int REFERENCES tbl_country(country_id),
+    state_id int REFERENCES tbl_state(state_id),
+    city_id int REFERENCES tbl_city(city_id)
+
+)
+```
+
+## sql join ...
+
+   sql join is used to join more than one tables with its common field or data.
+
+## types of sql join 
+
+  1. inner join 
+  2. join 
+  3. outer join 
+     a) left join 
+     b) right join 
+     c) full join 
+  4. cross join       
 
 
