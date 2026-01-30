@@ -436,9 +436,9 @@ subquery meanse query within another query
 
    **users**
 
-| user_id(pk) | email | age | salary | department
-|-------------|-----------|----------|--------------|    
-|1            |b@gmail.com|Rs.89500  |IT            |   
+| user_id(pk) | email | age     | salary | department|
+|-------------|-----------|-----|--------------------|    
+|1            |b@gmail.com| 34  | Rs.89500|IT        |   
 
 
 
