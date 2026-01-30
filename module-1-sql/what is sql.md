@@ -385,10 +385,60 @@ subquery meanse query within another query
 
 ```
 
+## TCL : transactional query language 
+ 
+     1) commit
+        commit will be used to save any data after delete 
+    
+      **query**
+ 
+      ```
+      start TRANSACTION;
+      delete from tbl_feedback where id=4;
+      commit;
+      
+      ```
+
+     2) rollback 
+
+        after delete we rollback our data using rollback
+
+        **query**
+
+        ```
+        start TRANSACTION;
+        select * from tbl_feedback where id=4;
+        rollback;
+
+        ```
+
+        **Note**
+         rollback only support in oracle mysql is not supported
 
 
 
+## normalisation in SQL ...
 
+1.  Normalization is used to removed redundancy(dublicate data formate) data formate from tables
+2.  Normalization is used to provide relationship between one tables to another table
+3.  Normalization is used to create a Normalized formate of any tables 
+
+## types of normalization...
+
+1. 1-NF (Normalized form) 
+2. 2-NF (Normalized form)
+3. 3-NF (Normalized form) 
+4. 4-NF (Normalized form)
+5. 5-NF (Normalized form)  
+
+
+1. create a 1-NF (basic information about table with primary key)
+
+   **users**
+
+| user_id(pk) | email | age | salary | department
+|-------------|-----------|----------|--------------|    
+|1            |b@gmail.com|Rs.89500  |IT            |   
 
 
 
