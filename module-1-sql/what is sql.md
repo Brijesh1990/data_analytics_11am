@@ -518,7 +518,7 @@ create a 3-NF (its start to seperate tables with provides relationship b/w one t
 
    **tbl_customers**
 
-| customer_id(pk) | email | age     | address | country_id(fk)|state_id(fk)| city_id(fk) |
+| customer_id(pk)|email| age|address|country_id(fk)|state_id(fk)|city_id(fk)|
 |-------------|-------|----|-----|-------------------------|---------------|-------------|    
 |1            |b@gmail.com| 34  | 150 feet rajkot |1        | 1             | 1
 |2            |p@gmail.com| 18  | 150 feet ahemdabd |1      | 1             | 2          |
@@ -557,3 +557,146 @@ create table tbl_customers
   4. cross join       
 
 
+  **inner join**
+  ```
+  select  tbl_customers.*,countryname,statename,cityname from tbl_customers inner join tbl_country on tbl_customers.country_id=tbl_country.country_id inner join tbl_state on tbl_customers.state_id=tbl_state.state_id inner join tbl_city on tbl_customers.city_id=tbl_city.city_id; 
+
+  ```
+
+  
+  **join**
+  ```
+  select  tbl_customers.*,countryname,statename,cityname from tbl_customers  join tbl_country on tbl_customers.country_id=tbl_country.country_id  join tbl_state on tbl_customers.state_id=tbl_state.state_id  join tbl_city on tbl_customers.city_id=tbl_city.city_id; 
+
+  ```
+
+  or
+
+   ```
+  select  customer_id,name,email,phone,address,countryname,statename,cityname from tbl_customers  join tbl_country on tbl_customers.country_id=tbl_country.country_id  join tbl_state on tbl_customers.state_id=tbl_state.state_id  join tbl_city on tbl_customers.city_id=tbl_city.city_id; 
+
+  ```
+
+**outer join**
+
+**left join**
+
+ left join is used to join first table of left rows to second table of left rows if data match join table otherwise return null value.
+
+```
+select   tbl_customers.*,countryname,statename,cityname from tbl_customers  left join tbl_country on tbl_customers.country_id=tbl_country.country_id  left join tbl_state on tbl_customers.state_id=tbl_state.state_id left join tbl_city on tbl_customers.city_id=tbl_city.city_id; 
+
+```
+
+**right join**
+
+ right join is used to join second table of right rows to first table of right rows if data match join table otherwise return null value.
+
+```
+select   tbl_customers.*,countryname,statename,cityname from tbl_customers right join tbl_country on tbl_customers.country_id=tbl_country.country_id  right join tbl_state on tbl_customers.state_id=tbl_state.state_id right join tbl_city on tbl_customers.city_id=tbl_city.city_id; 
+
+```
+
+**full join**
+full join =left join + right join 
+
+```
+full join is not supported in mysql structured
+
+```
+
+**cross join**
+cross join is used to join more than one table and return dublicate of data from tables 
+
+```
+select * from tbl_customers cross join tbl_country;
+```
+
+
+## sql key constraints 
+
+   key constraints is used to provide a primary key | foreign key | unique key in a tables there we used key constraints
+
+   1. **primary key**:
+
+       1. A pk key only provides one time in a table on id 
+       2. A pk is always auto_increments
+       3. A pk is never return null value 
+       4. A pk is stored uniquely 
+
+  **tbl_country**
+
+  | country_id(pk)   | countryname |
+  |------------------|-------------|
+  |1                 | india       |         
+
+
+   2. **unique key**:
+
+       1. A uk key provides more than one columns 
+       2. A uk is at least stored one times a null value 
+       4. A uk is stored uniquely
+       5. A uk key never return dublicate value 
+
+  **tbl_users**
+
+  | user_id(pk)   |name | age | email(uk)  | phone     |
+  |---------------|-----|-----|--------|---------------|
+  |1              |A    | 3   |a@gmail.com | 9173565245| 
+
+
+     ```
+     ALTER TABLE `tbl_employee` ADD UNIQUE(`email`);
+ 
+    ```      
+
+
+  3. **foreign key**  
+
+       1. A fk key provides more than one columns 
+       2. A fk is never return null value 
+       4. A fk is used to provides dublicate data and create relationship between one tables to another tables  with common field.
+      
+
+  **tbl_students**
+
+  | student_id(pk)   | studentname |
+  |------------------|-------------|
+  |1                 | meet        |
+  |2                 | vijay       |
+  |3                 | govind      | 
+
+  
+  **tbl_faculty**
+
+  | faculty_id(pk)   | facultyname | age   |   department  |  student_id(fk) |
+  |------------------|-------------|-------|---------------|-----------------|
+  |1                 | brijesh     | 34    |   CSE         |    1            |
+  |2                 | mitesh      | 29    |   IT          |    2            |
+  |3                 | prakruti    | 29    |   EC          |    3            |
+
+  **how to create a foreign key**
+
+  ```
+   create table tbl_faculty
+  (
+   faculty_id int primary key AUTO_INCREMENT,
+   facultyname varchar(255),
+   age int,
+   salary int,
+   department varchar(255),
+   student_id int REFERENCES tbl_students(student_id)    
+   )
+  ``` 
+
+
+**join**
+```
+select tbl_faculty.*, name from tbl_faculty join tbl_student  on tbl_faculty.student_id=tbl_student.student_id;
+```
+
+or
+
+```
+select faculty_id,email,facultyname,age,salary,name from tbl_faculty join tbl_student  on tbl_faculty.student_id=tbl_student.student_id;
+```
