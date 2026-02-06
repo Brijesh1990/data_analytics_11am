@@ -68,7 +68,7 @@
     2. save file with .py 
     3. run file in command line 
 
-  13. python is an progamming language
+  13. python is an programming language
 
       1. operator in python
       2. variables in python 
@@ -97,7 +97,65 @@
 
 ## what is operator in python 
    **operator in python**
+   A operator used in python as a programming language that can be used to perform operation on values and variables there we used operator.
 
+   **types of operator**
 
+  1. airthematic operator
+     **examples**
+     ```
+     +, -, /,*, % etc 
+     ``` 
 
-            
+  2. relational operator or comparison
+     **examples**
+     ```
+     >, <, >=, <=,==,!= etc 
+     ``` 
+
+  3. logical operator
+     **examples**
+     ```
+     AND, OR, NOT etc 
+     ``` 
+
+     
+  4. bitwise operator
+     **examples**
+     ```
+   &,!,^,-,<<,>> etc 
+     ``` 
+
+  5. assingment operator
+     **examples**
+     ```
+     =, +=,-=,*=, %= etc 
+     ``` 
+
+# variables in python 
+  A variable is used to stored information of data 
+  A variable have an data types 
+  A variables is many types of data types ...
+  **examples**
+  a=10
+  b=20
+  c="brijesh"
+  name='brijesh kumar pandey'
+  d=10.56
+
+  ```
+a=10
+b=20
+c="brijesh"
+name='brijesh kumar pandey'
+d=10.56
+
+# print(name)
+print(type(name))
+
+print(type(a))
+
+print(type(c))
+
+print(type(d))
+  ```
