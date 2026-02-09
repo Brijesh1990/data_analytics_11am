@@ -144,18 +144,79 @@
   d=10.56
 
   ```
-a=10
-b=20
-c="brijesh"
-name='brijesh kumar pandey'
-d=10.56
+  a=10
+ b=20
+ c="brijesh"
+ name='brijesh kumar pandey'
+ d=10.56
 
-# print(name)
-print(type(name))
+ # print(name)
+ print(type(name))
+ print(type(a))
+ print(type(c))
+ print(type(d))
+ ```
 
-print(type(a))
+ ## rules of variables in python 
+  1. variable name must start with a letter or underscore
+  2. variable name can not start with number
+  3. variable name can not contain special character except underscore
+  4. variable name can not be a keyword in python 
 
-print(type(c))
+## how to find keyword in python 
+  1. import keyword
+  2. print(keyword.kwlist)  
 
-print(type(d))
+## indentation in python 
+  1. indentation is used to define a block of code in python 
+  2. indentation is used to define a function in python 
+  3. indentation is used to define a loop in python 
+  4. indentation is used to define a condition in python
+
+## casting in python 
+  1. type casting is used to convert one data type into another data type 
+  2. type casting is used to convert string into integer or float 
+  3. type casting is used to convert integer into string or float 
+  4. type casting is used to convert float into string or integer
+
+  **examples**
   ```
+  a=10
+  b=20.56
+  print(type(a))
+  print(type(b))
+  a=str(a)
+  b=int(b)
+  print(type(a))
+  print(type(b))
+  ```
+
+## variables case sensitivity in python 
+  1. variable name is case sensitive in python 
+  2. variable name can be same but with different case 
+  3. variable name can not be same with same case
+
+  **examples**
+  ```
+  a=10
+  A=20
+  print(a)
+  print(A)
+  ```  
+
+## data type of variables in python
+
+   which types of values stored in python that is called data type of variables in python
+
+   1. integer data type is used to stored whole number in python 
+   2. float data type is used to stored decimal number in python
+   3. string data type is used to stored sequence of characters in python
+   4. boolean data type is used to stored true or false value in python
+   5. list data type is used to stored multiple values in python
+   6. tuple data type is used to stored multiple values in python but it is immutable
+   7. set data type is used to stored multiple values in python but it is unordered and unindexed
+   8. dictionary data type is used to stored multiple values in python but it is unordered and indexed
+   9. complex data type is used to stored complex number in python
+   10. none data type is used to stored null value in python
+
+   
