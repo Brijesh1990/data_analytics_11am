@@ -220,3 +220,41 @@
    10. none data type is used to stored null value in python
 
    
+
+## what tkinter in python ?
+   **tkinter**
+
+   1. A tkinter is an module in python 
+   2. A tkinter used for create a standard GUI(graphical user interface) of our application 
+   3. A tkinter is used for create a desktop application GUI 
+   4. A tkinter is use create a graphical user interface with 
+
+      **examples**
+
+      Tkinter will used text, create box , create button, images  etc
+
+   5. Tkinter basically used to import an library for create an desktop applications
+
+## tkinter provides or its advantage
+
+   1. create an desktop application 
+   2. create a easy to used user friendly desktop app in GUI formate
+   3. A wide range of widgets text, images, button etc
+   4. Tkinter is support cross-plateform (support on all OS) 
+   5. Tkinter is used in python as a programming model and provides desktop app GUI
+   6. python default support tkinter 
+## how to install Tkinter 
+
+    ```
+    pip install tkinter
+    import tkinter as tk
+
+    ```
+
+## how to create your first windows app in tkinter
+
+  **examples**
+
+  ```
+
+  ```
